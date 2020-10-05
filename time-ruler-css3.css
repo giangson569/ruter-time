@@ -1,0 +1,406 @@
+/*==reset==*/
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+a {
+	text-decoration:none;
+}
+
+/*==body==*/
+body {
+	font-family:"Helvetica Neue", helvetica, arial, tahoma, sans-serif;
+	background: white;
+	margin: 0;
+	padding: 0;
+}
+
+/*==fonfs==*/
+@font-face {
+	font-family: sourcesanspro;
+	src: url(../../resources/fonts/SourceSansPro-Black.ttf);
+
+  font-family: lexendpeta;
+	src: url(../../resources/fonts/LexendPeta-Regular.ttf);
+}
+
+/*==header==*/
+header {
+	height: 50px;
+	overflow: hidden;
+	background: black;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+  border-bottom: 3px dotted white;
+}
+header > h1 {
+  font-family: sourcesanspro;
+	font-weight: bold;
+	font-size: 30px;
+	color: #fff;
+	width: auto;
+  height: 33px;
+  border-radius: 50%;
+}
+/*==main==*/
+main {
+	width: 910px;
+  height: 500px;
+  overflow: hidden;
+  background: rgba(250,250,250,0.5);
+	border: transparent;
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: repeat(3, 303px);
+  grid-template-rows: 100%;
+}
+/*box-content*/
+.box-content {
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+	border-right: 1px solid black;
+}
+#introduce, #tutorial ol, ul, p {
+  font-size: 12px;
+  font-family: lexendpeta;
+  margin-bottom: 3px;
+}
+#introduce > h2 {
+  font-size: 23px;
+  font-family: sourcesanspro;
+  text-align: center;
+  color: #f60;
+}
+#introduce, #tutorial > ul, ol {
+  list-style-position: inside;
+}
+#tutorial > h2 {
+  font-family: sourcesanspro;
+  text-align: center;
+  color: #ff6600;
+  margin-top: 3px;
+}
+#tutorial > details {
+  border-bottom: 1px solid black;
+}
+#tutorial > details > summary {
+  color: #f60;
+  font-weight: 900;
+  padding: 5px 3px;
+  outline: none;
+}
+.box-content > h2 {
+  font-family: sourcesanspro;
+  color: #ff6600;
+  text-align: center;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+#form-time > input {
+  width: 290px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 30px;
+  padding-left: 6px;
+  border-radius: 15px;
+  outline: none;
+  margin-left: 3px;
+}
+#form-time > fieldset {
+  border-radius: 15px;
+}
+#form-time legend {
+  font-family: lexendpeta;
+  font-size: 12px;
+  padding-top: 6px;
+  padding-left: 5px;
+}
+.box-set-time > input {
+  height: 23px;
+  text-align: center;
+  font-weight: 900;
+  color: #6a6a7c;
+  font-size: 15px;
+  line-height: 23px;
+  border-radius: 15px;
+  outline: none;
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+#datetime-start,#datetime-end {
+  width: 286px;
+}
+#errors,#errorchaname {
+  color: #f00;
+  font-weight: 900;
+  text-align: center;
+}
+#sumi {
+  width: 290px;
+  height: 36px;
+  color: #003d99;
+  font-size: 15px;
+  font-weight: 900;
+  background: #9f3;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  margin: 6px auto;
+}
+#box-resul {
+  height: 291px;
+  overflow: hidden;
+}
+#box-resul > h2 {
+  font-family: sourcesanspro;
+  text-align: center;
+  color: #ff6600;
+  margin-top: 3px;
+}
+#list-results {
+  height: 261px;
+  overflow-Y: auto;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+#list-results > li {
+  text-align: left;
+  padding-left: 10px;
+}
+#loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  background: #111;
+  z-index: 10;
+}
+#loading > label {
+  display: block;
+  color: white;
+  text-align: center;
+  margin-top:  280px;
+  margin-bottom: 6px;
+}
+#loading > progress {
+  width: 290px;
+  height: 30px;
+  display: block;
+  background-color: red;
+  margin: 3px auto;
+}
+#boxsave {
+  width: 100%;
+  height: 69px;
+  padding-top: 5px;
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  transition: bottom 1s linear;
+}
+#boxsave > p {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+#boxsave > button {
+  width: 102px;
+  height: 36px;
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  background: green;
+  display: block;
+  outline: none;
+  margin: 3px auto;
+}
+#list-data {
+  width: 100%;
+  height: 460px;
+  overflow-Y: auto;
+  overflow-X: hidden;
+}
+#list-data > li {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid black;
+}
+.dat {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.dat > summary {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 9px 0;
+  border: transparent;
+  outline: none;
+}
+.dat > ul {
+  padding-left: 6px;
+}
+.dat > img {
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 1px;
+}
+.setFun {
+  width: 50px;
+  height: auto;
+  list-style: none;
+  position: absolute;
+  top: 25px;
+  right: 2px;
+  background: white;
+  border: 1px solid black;
+  display: none;
+  box-shadow: -5px 3px 3px #60606c;
+}
+.s1 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: transparent;
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 0 red;
+  display: block;
+}
+.setFun > li {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 3px;
+  margin-left: -6px;
+  cursor: pointer;
+  transition: all 1s;
+}
+.setFun > li:hover {
+  background: #50505c;
+  color: white;
+}
+#deletedata {
+  width: 100%;
+  height: auto;
+  background: rgba(0,0,0,0.6);
+  padding-bottom: 15px;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  z-index: 3;
+  border: 1px solid black;
+  display: none;
+}
+#deletedata > p {
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin: 6px 0;
+}
+#deletedata > button {
+  width: 102px;
+  height: 36px;
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  margin-left: 30px;
+}
+#changenamedata {
+  width: 100%;
+  height: auto;
+  background: rgba(0,0,0,0.8);
+  padding-bottom: 15px;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  z-index: 3;
+  border: 1px solid black;
+  display: none;
+}
+#changenamedata > input {
+  width: 100%;
+  height: 23px;
+  text-align: center;
+  font-size: 15px;
+  outline: none;
+  border-radius: 15px;
+  margin: 6px 0;
+}
+#changenamedata > button {
+  width: 102px;
+  height: 36px;
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  margin-left: 30px;
+}
+#dele,#nocha {
+  background: red;
+}
+#nodele,#cha {
+  background: green;
+}
+/*==footer==*/
+footer {
+  height: 55px;
+  text-align:center;
+  padding-top: 5px;
+  background: rgb(0,0,0);
+  border-top: 3px dotted white;
+}
+footer > p,address {
+  color: white;
+}
+/*==responsvie==*/
+@media only screen and (max-width: 900px) {
+  main {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 360px repeat(2,500px);
+  }
+  .box-content {
+    border-right: transparent;
+    border-bottom: 1px solid black;
+  }
+  #form-time {
+    width: 296px;
+    margin: 3px auto;
+  }
+  #deletedata > button {
+    width: 80%;
+    display: block;
+    margin: 6px auto;
+  }
+  #changenamedata > button {
+    width: 100%;
+    display: block;
+    margin: 6px auto;
+  }
+}

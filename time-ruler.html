@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+	<head>
+		<meta charset ="UTF-8" />
+		<meta name ="description" content ="công cụ tính thời gian, để thống kê số thời gian đã trôi qua của một thứ gì đó" />
+		<meta name ="author" content ="đỗ giang sơn" />
+		<meta name ="keywords" content ="tính thời gian đã sống,tính tổng thời gian,lưu trữ thời gian" />
+		<meta name ="viewport" content ="width=device-width, initial-scale=1" />
+		<title>ứng dụng thước thời gian</title>
+		<link rel ="stylesheet" type ="text/css" href ="../css/time-ruler-css3.css" />
+	</head>
+	<body>
+		<header>
+      <h1>Thước Thời Gian</h1>
+		</header>
+    
+		<main>
+      <div id="loading">
+        <label for="barprog" id="cs">vui lòng đợi</label>
+        <progress id="barprog" value="10" max="100">10%</progress>
+      </div>
+      
+			<section class="box-content" style="overflow-Y:auto;overflow-X:hidden;">
+				<article id="introduce">
+					<h2>Giới Thiệu</h2>	
+					<p>
+            <strong style="background: black;color: #fff;padding: 1px 8px;">Thước Thời Gian</strong> là một ứng dụng hoàn toàn miễn phí để tính chính xác một 
+            khoảng thời gian nào đó,<strong style="background: black;color: #fff;padding: 1px 8px;">Thước Thời Gian</strong>
+            sẽ tính và trả về kết quả chính xác chỉ trong vài giây cho đến vài phút tùy vào độ dài của khoảng thời gian đó,
+            sau khi có kết quả từ <strong style="background: black;color: #fff;padding: 1px 8px;">Thước Thời Gian</strong>
+            bạn có thể lưu kết quả đó vào trong <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> cực kỳ bảo mật của
+            <strong style="background: black;color: #fff;padding: 1px 8px;">Thước Thời Gian</strong> 
+            và sau đó bạn có thể xem lại kết quả đó trong <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong>
+            bất cữ lúc nào bạn muốn.
+          </p>
+          <p>chúc bạn có thật nhiều khoảng thời gian tuyệt vời trong cuộc đời này.</p>
+				</article>
+        <hr />
+				<article id="tutorial">
+					<h2>Hướng Dẫn</h2>
+          <details>
+            <summary>Đo Thời Gian</summary>
+            <p>bạn hãy làm theo hướng dẫn này để có kết quả chính xác nhất.</p>
+            <ol>
+              <li>
+                để bắt đầu, xin hãy nhập <strong><em>tên khoảng thời gian</em></strong> của bạn vào trường
+                <strong style="background:white;padding:1px 8px;color:#50505c;border:1px inset black;border-radius:15px;">
+                <em>Tên Khoảng Thời Gian ...</em></strong> trong phần <strong style="color: #f60;"><em>Đo Thời Gian</em>
+                </strong>, <strong><em>Tên Khoảng Thời Gian</em></strong> sẽ được sử dụng cho việc lưu trữ sau này.
+              </li>
+              <li>
+                tiếp đến hãy nhập <strong>mốc thời gian bắt đầu</strong> vào trường <strong>Từ Thời Điểm</strong>,
+                thông tin này sẽ cho ứng dụng biết phải bắt đầu đếm từ đâu.
+              </li>
+              <li>
+                đã có điểm đầu thì phải có điểm cuối, hãy nhập mốc thời gian đích vào trường 
+                <strong>Đến Thời Điểm</strong> thông tin này sẽ cho ứng dụng biết phải dừng đếm ở thời điểm nào.
+              </li>
+              <li>
+                và cuối cùng trong hướng dẫn đo thời gian này là nhấp vào nút 
+                <strong style="background:#9f3;padding:2px 6px;color:#003d99;border-radius:15px;">Đếm</strong> và chờ kết quả.
+              </li>
+            </ol>
+            <p>
+              bạn sẽ nhận được một danh sách kết quả, hiện thị trong phần
+              <strong style="color: #f60;">Kết Quả</strong> bên dưới.
+            </p>
+          </details>
+          <details>
+            <summary>Lưu Kết Quả</summary>
+            <p>
+              bạn hãy làm theo hướng dẫn này để lưu kết quả vào <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong>
+              của ứng dụng.
+            </p>
+            <p>
+              để bắt đầu, xin hãy kiểm tra xem có thông báo lỗi trong phần
+              <strong style="color: #f60;"><em>Đo Thời Gian</em></strong> hay không, nếu có xin hãy
+              <strong>sửa lỗi đó và nhấp lại nút <strong style="background:#9f3;padding:2px 6px;color:#003d99;border-radius:15px;">
+              Đếm</strong> sau khi thời gian chờ kết thúc mà không có thông báo lỗi</strong> chức năng lưu sẽ tự động được
+              bật lên, và hỏi <strong>bạn có muốn lưu kết quả này ?</strong> nếu bạn muốn lưu kết quả của mình vào trong
+              <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> hãy nhấp vào nút
+              <strong style="background:#9f3;padding:2px 6px;color:#003d99;border-radius:15px;">
+              Lưu</strong> kết quả của bạn sẽ được đưa vào <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong>
+              của ứng dụng.
+            </p>
+          </details>
+          <details style="border-bottom: transparent;">
+            <summary>Xóa và Sửa Kết Quả Trong <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong></summary>
+            <p>
+              bạn hãy làm theo hướng dẫn này để xóa và sửa kết quả trong
+              <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> của ứng dụng.
+            </p>
+            <p>
+              để xóa một mục trong <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> của ứng dụng bạn hãy,
+              nhấp vào mục bạn muốn xóa, sau đó nhấp tiếp vào biểu tượng 
+              <img src="../../resources/image/menuf.png" alt="hộp menu" width="15" height="12" style="vertical-align:middle;" />
+              ở phía bên phải trên cùng của mục đó, một hộp menu sẽ được hiện thị hãy nhấp vào nút 
+              <strong style="background:#50505c;padding:1px 8px;color:white;">Xóa</strong> chức năng xóa sẽ được bật lên,
+              và hỏi <strong>bạn thật sự muốn xóa mục này ?</strong> nếu bạn muốn xóa mục đó hãy nhấp vào nút 
+              <strong style="background:red;padding:1px 8px;color:white;border-radius:15px;">Xóa</strong> 
+              mục đó sẽ bị xóa khỏi <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> và ngược lại hãy nhấp vào nút 
+              <strong style="background:green;padding:1px 8px;color:white;border-radius:15px;">Hủy</strong> 
+              mục đó sẽ không bị xóa khỏi <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> của ứng dụng.
+            </p>
+            <hr />
+            <p>
+              để sửa tên một mục trong <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> của ứng dụng bạn hãy,
+              nhấp vào mục bạn muốn sửa tên, sau đó nhấp tiếp vào biểu tượng 
+              <img src="../../resources/image/menuf.png" alt="hộp menu" width="15" height="12" style="vertical-align:middle;" />
+              ở phía bên phải trên cùng của mục đó, một hộp menu sẽ được hiện thị hãy nhấp vào nút
+              <strong style="background:#50505c;padding:1px 8px;color:white;">Sửa</strong>
+              chức năng sửa tên sẽ được bật lên, và bạn sẽ nhập tên mới của mục đó vào trường 
+              <strong style="background:white;padding:1px 8px;color:#50505c;border:1px inset black;border-radius:15px;">
+              Tên Mới Của Mục Này Là ?</strong> và nhấp vào nút
+              <strong style="background:green;padding:1px 8px;color:white;border-radius:15px;">Sửa</strong>
+              nếu bạn muốn sửa tên mục đó, nếu không có thông báo lỗi nào, mục đó sẽ được thay đổi tên trong
+              <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> và ngược lại hãy nhấp vào nút
+              <strong style="background:red;padding:1px 8px;color:white;border-radius:15px;">Hủy</strong>
+              mục đó sẽ giữ nguyên tên cũ trong <strong style="color: #f60;"><em>Kho Lưu Trữ</em></strong> của ứng dụng.
+            </p>
+          </details>
+				</article>
+			</section>
+			<section class="box-content">
+				<h2>Đo Thời Gian</h2>
+        <form action="#" method="get" id="form-time" name="formtime" onsubmit="return false">
+          <input type="text" required="required" name="topics-time" id="topics-time" placeholder="Tên Khoảng Thời Gian ..." />
+          <fieldset class="box-set-time">
+            <legend>Từ Thời Điểm</legend>
+            <input type="datetime-local" required="required" id="datetime-start" />
+          </fieldset>
+          <fieldset class="box-set-time">
+            <legend>Đến Thời Điểm</legend>
+            <input type="datetime-local" required="required" id="datetime-end" />
+          </fieldset>
+          <p id="errors"></p>
+          <input type="submit" value="Đếm" id="sumi" />
+        </form>
+        <hr />
+        <div id="box-resul">
+          <h2>Kết Quả</h2>
+          <ul id="list-results">
+        
+          </ul>
+        </div>
+        <div id="boxsave">
+          <p>bạn có muốn lưu kết quả này ?</p>
+          <button id="save">Lưu</button>
+        </div>
+      </section>
+
+			<section class="box-content" style="border-right: transparent;">
+        <h2>Kho Lưu Trữ</h2>
+        <div id="deletedata">
+          <p>bạn thật sự muốn xóa mục này ?</p>
+          <button type="button" id="dele">Xóa</button>
+          <button type="button" id="nodele">Hủy</button>
+        </div>
+        <div id="changenamedata">
+          <input type="text" required="required" name="chanada" id="chanada" placeholder="Tên Mới Của Mục Này Là ?" />
+          <p id="errorchaname"></p>
+          <button type="button" id="cha">Sửa</button>
+          <button type="button" id="nocha">Hủy</button>
+        </div>
+        <ul id="list-data">
+        
+        </ul>
+			</section>
+		</main>
+
+		<footer>
+			<p>&#169; Bản quyền thuộc về</p>
+      <address>Đỗ Giang Sơn</address>
+		</footer>
+    <script src="../javascript/object-time-ruler.js"></script>
+    <script src="../javascript/function-time-ruler.js"></script>
+	</body>
+</html>
